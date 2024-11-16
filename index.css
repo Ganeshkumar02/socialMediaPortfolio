@@ -50,12 +50,13 @@ body {
 
 @keyframes anim {
     0% {
-        background-position: left;
-
+        background-position: left;    
     }
-
-    100% {
+    50%{
         background-position: right;
+    }
+    100% {
+        background-position: left;
     }
 
 }
@@ -88,6 +89,9 @@ body {
 
 ion-icon:hover {
     color: blue;
+    transform: scale(1.5);
+    transform: translateY(-10px);
+    transition: all ease-in-out .5s;
 }
 
 ion-icon {
@@ -107,4 +111,8 @@ button {
     animation: anim 2s infinite linear;
     color: white;
     font-weight: bold;
+}
+button:hover{
+    transform: scale(1.2);
+    transition: all ease-in-out .5s;
 }
